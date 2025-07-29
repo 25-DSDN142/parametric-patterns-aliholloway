@@ -1,5 +1,5 @@
 //your parameter variables go here!
-let sheepFurSize = 40;
+let sheepFurSize = 35;
 let cheekPosY = 118;
 let cheekSize = 4;
 //let purple = color(205, 139, 224); // line 
@@ -8,7 +8,7 @@ let cheekSize = 4;
 //let green = color(157, 237, 162); // line 
 //let white = color(255); // line 
 //let sheepCol = blue; // line
-let mouthSize = 3;
+let mouthSize = 1;
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -20,11 +20,15 @@ function setup_wallpaper(pWallpaper) {
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.row_offset  = 0;
 }
 
 function wallpaper_background() {
-  background(240, 255, 240); //light honeydew green colour
+  if (sheepFurSize > 30) {
+    background(200, 230, 255); // light blue background
+  } else {
+    background(240, 255, 240); //light honeydew green colour
+  }
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
