@@ -2,6 +2,10 @@
 let sheepFurSize = 35;
 let cheekPosY = 118;
 let cheekSize = 4;
+
+let sheepFurSizeThreshold = 30; // background color changes
+
+
 //let purple = color(205, 139, 224); // line 
 //let pink = color(240, 156, 188); // line 
 //let blue = color(128, 206, 255); // line
@@ -11,8 +15,8 @@ let cheekSize = 4;
 let mouthSize = 1;
 
 function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(DEVELOP_GLYPH);
-  //pWallpaper.output_mode(GRID_WALLPAPER);
+  //pWallpaper.output_mode(DEVELOP_GLYPH);
+  pWallpaper.output_mode(GRID_WALLPAPER);
   
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
@@ -24,24 +28,68 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  if (sheepFurSize > 30) {
-    background(200, 230, 255); // light blue background
+  // colors
+  let purple = color(205, 139, 224);
+  let pink = color(240, 156, 188);
+  let blue = color(128, 206, 255);
+  let green = color(157, 237, 162);
+  let white = color(255);
+  let indigo = color(75, 0, 130);
+  let darkBlue = color(9, 1, 122);
+  let limeGreen = color(162, 191, 120);
+  let lightBlue = color(120, 173, 191);
+  let sunsetOrange = color(242, 118, 90);
+
+  if (sheepFurSize > sheepFurSizeThreshold) {
+    background(green);
+    //background(200, 230, 255); // light blue background
   } else {
     background(240, 255, 240); //light honeydew green colour
   }
 }
 
+
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-    //colors
-    let purple = color(205, 139, 224);
-    let pink = color(240, 156, 188);
-    let blue = color(128, 206, 255);
-    let green = color(157, 237, 162);
-    let white = color(255);
+  // colors
+  let purple = color(205, 139, 224);
+  let pink = color(240, 156, 188);
+  let blue = color(128, 206, 255);
+  let green = color(157, 237, 162);
+  let white = color(225);
+  let indigo = color(75, 0, 130);
+  let darkBlue = color(9, 1, 122);
+  let limeGreen = color(162, 191, 120);
+  let lightBlue = color(120, 173, 191);
+  let sunsetOrange = color(242, 118, 90);  
 
-    let sheepCol = purple;
 
-    //--------  BODY -----------------------------------------
+    let sheepCol = white;
+
+    let line_length = 100;
+    let line_width = 10;
+    let y_offset = line_length * 0.5; // 100
+    let x_offset = 0;  // 5
+    
+    let x1 = 0;
+    let y1 = 0;
+    let x2 = 0;
+    let y2 = line_length; 
+    
+    
+    // transform --- start -----
+    translate(100, 100);  // center of cell is the pivot
+    rotate(30);
+    //-------
+    stroke(25, 56, 12);
+    strokeWeight(line_width);
+    line(x1, y1 - y_offset, x2, y2 - y_offset);
+    // transform --- end -----
+
+    // unwinds for downstream code
+    rotate(-30);
+    translate(-100, -100);
+
+    //--------  SHEEP BODY -----------------------------------------
 
     //sheep body fur
     noStroke();
@@ -57,7 +105,13 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     //sheep fur filler
     ellipse(102,120,50,25); 
 
-    //---------- HEAD -------------------------------------------
+    //---------------------------------------------------------------
+
+    
+ 
+     noStroke(); //black
+
+    //---------- SHEEP HEAD -------------------------------------------
 
     //sheep head
     fill(247, 220, 193); //beige
@@ -86,7 +140,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     strokeWeight(mouthSize);
     arc(115,121,10,6,0,180); 
     
-    // ------------ LEGS / FEET ---------------------------------
+    // ------------ SHEEP LEGS / FEET ---------------------------------
     //sheep legs
     noStroke();
     fill(sheepCol); 
