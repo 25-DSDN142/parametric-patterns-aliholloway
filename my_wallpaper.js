@@ -21,10 +21,14 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.resolution(FIT_TO_SCREEN);
   pWallpaper.show_guide(true); //set this to false when you're ready to print
 
+ 
+  
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
   pWallpaper.grid_settings.cell_height = 200;
   pWallpaper.grid_settings.row_offset  = 0;
+
+
 }
 
 function wallpaper_background() {
@@ -63,7 +67,61 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let sunsetOrange = color(242, 118, 90);  
 
 
-    let sheepCol = white;
+  let sheepCol = white;
+
+
+
+
+
+  
+  //--------- PLAID - START ----------------------------------------------
+  // parameters
+  let cell_width = 200.0;
+  let cell_height = 200.0;
+
+  let num_stripe_rows = 6;  // even numbers match cell alignment 
+  let num_stripe_cols = 6;  // even numbers match cell alignment 
+
+  let stripe_width = cell_width / num_stripe_cols;   // width -> cols -> vertical
+  let stripe_height = cell_height / num_stripe_rows;  // hieght -> rows -> horizontal
+
+  
+  
+
+  
+  noStroke();
+  // draw horizontal stripes (rows)
+  blue.setAlpha(100); // set alpha 
+  fill(blue);
+  for (let i = 0; i <= num_stripe_rows; i++) {  // iterations: 0, 1, 2, 3, 4, 5
+    if (i % 2 == 1) {   // odd
+      rect(0, stripe_height * i, cell_width, stripe_height)  // rect(x, y, width, height) -> (x, y) is top-left corner of rectangle  
+    }
+  }
+  blue.setAlpha(255); // set alpha back to full opacity
+
+  // draw vertical stripes
+  pink.setAlpha(100); // set alpha 
+  fill(pink);
+  for (let i = 0; i <= num_stripe_cols; i++) {  // iterations: 0, 1, 2, 3, 4, 5
+    if (i % 2 == 1) {   // odd
+      rect(stripe_width * i, 0, stripe_width, cell_height)  // rect(x, y, width, height) -> (x, y) is top-left corner of rectangle  
+    }
+  }
+  //pink.setAlpha(255); // set alpha back to half opacity
+
+
+  //--------- PLAID - END ----------------------------------------------
+    
+  
+  
+  
+
+
+
+
+  
+/*
 
     let line_length = 100;
     let line_width = 10;
@@ -88,6 +146,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     // unwinds for downstream code
     rotate(-30);
     translate(-100, -100);
+    */
+
+
+
 
     //--------  SHEEP BODY -----------------------------------------
 
@@ -152,4 +214,6 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     rect(83,160,7,6); //left hoof
     rect(118,160,7,6); //right hoof
 
+
     }
+  
