@@ -13,19 +13,24 @@
   let is_stripe_color_BGC = false;  // design 8
   let is_stripe_color_BYO = false;  // design 9, design 1
 
+
   //------ COLOR PARAMETERS - END -------------------------------------------------
+
 
   //------ PLAID DIMENSIONS PARAMETERS - START ----------- lines 201 to 203 --------------------------------------
   let num_stripe_rows = 6;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
   let num_stripe_cols = 6;  // even numbers that are multiple of 3 -> match cell alignment
   let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
-  
+ 
   //------ PLAID DIMENSIONS PARAMETERS - END -------------------------------------------------
 */
 
 
 
-/* 
+
+
+
+/*
 // ---------- SHEEP PARAMETERS - START -------- lines 307 to 322 ------------------------------------------------
 // sheep size
 let sheepFurSize = 38;
@@ -33,16 +38,26 @@ let cheekSize = 5.5;
 let mouthSize = 0.9;
 
 
+
+
 // sheep color
 let sheepCol = color(pink);
+
+
 
 
 // sheep position
 let sheep_pos_x = -153.0;
 let sheep_pos_y = -173.0;
 
+
 // ---------- SHEEP PARAMETERS - END --------------------------------------------------------
 */
+
+
+
+
+
 
 
 
@@ -56,6 +71,8 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
 
+
+
  
   //Grid settings
   pWallpaper.grid_settings.cell_width  = 200;
@@ -64,7 +81,11 @@ function setup_wallpaper(pWallpaper) {
 }
 
 
+
+
 function wallpaper_background() {
+
+
 
 
 // set background color
@@ -74,11 +95,17 @@ function wallpaper_background() {
 
 
 
+
+
+
+
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
     // colors
   let primary_red = color(255, 0, 0);
   let primary_yellow = color(255, 255, 0);
   let primary_blue = color(0, 0, 255);
+
+
 
 
   let red = color(255, 128, 128);
@@ -99,10 +126,14 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let PBG_green = color(132, 207, 197);
 
 
+
+
   let GGW_purple = color(62, 54, 63);
   let GGW_green_light = color(183, 180, 72);
   let GGW_green_dark = color(108, 121, 49);
   let GGW_white = color(254, 252, 234);
+
+
 
 
   let ORB_black = color(25, 24, 10);
@@ -111,10 +142,14 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let ORB_brown = color(63, 34, 15);
 
 
+
+
   let ROY_cream = color(250, 240, 202);
   let ROY_red = color(249, 87, 56);
   let ROY_orange = color(238, 150, 75);
   let ROY_yellow = color(244, 211, 94);
+
+
 
 
   let PCB_black = color(15, 15, 15);
@@ -123,10 +158,14 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let PCB_blue = color(153, 225, 217);
 
 
+
+
   let PLP_violet = color(156, 137, 184);
   let PLP_pink = color(240, 166, 202);
   let PLP_lavender = color(239, 195, 230);
   let PLP_purple = color(184, 190, 221);
+
+
 
 
   let CSB_gray = color(57, 92, 107);
@@ -135,10 +174,16 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let CSB_blue = color(128, 164, 237);
 
 
+
+
   let BGC_purple = color(75, 63, 114);
   let BGC_blue = color(31, 32, 65);
   let BGC_green = color(65, 123, 90);
   let BGC_cream = color(208, 206, 186);
+
+
+
+
 
 
 
@@ -162,6 +207,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let stripe_color_BGC = [BGC_purple, BGC_blue, BGC_green, BGC_cream];
   let stripe_color_BYO = [BYO_blue_dark, BYO_blue, BYO_yellow, BYO_orange];
 
+
   //------ color parameters - start -------------------------------------------------
   let color_alpha = 85;
   // choose color combination
@@ -175,19 +221,26 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   let is_stripe_color_BGC = false;  // design 8
   let is_stripe_color_BYO = false;  // design 9, design 1
 
+
   //------ color parameters - end -------------------------------------------------
+
 
   //------ plaid dimensions parameters - start -------------------------------------------------
   let num_stripe_rows = 6;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
   let num_stripe_cols = 6;  // even numbers that are multiple of 3 -> match cell alignment
   let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
-  
+ 
   //------ plaid dimensions parameters - end -------------------------------------------------
+
+
 
 
   // calculate stripe size
   let stripe_width = cell_size / num_stripe_cols;   // width -> cols -> vertical
   let stripe_height = cell_size / num_stripe_rows;  // hieght -> rows -> horizontal
+
+
+
 
 
 
@@ -224,6 +277,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 
 
+
+
+
+
+
+
 //***********************************************************************************************
   //--------- PLAID - START ----------------------------------------------
   let current_color = white;
@@ -234,7 +293,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   rect(0, 0, cell_size, cell_size);
 
 
+
+
  
+
+
 
 
   // draw horizontal stripes (rows)
@@ -257,6 +320,12 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 
 
+
+
+
+
+
+
   // draw vertical stripes
   color_count = 1;  
   for (let i = 0; i < num_stripe_cols; i++) {  // iterations: 0, 1, 2, 3, 4, 5
@@ -273,8 +342,18 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   }
 
 
+
+
   //--------- PLAID - END ----------------------------------------------
 //***********************************************************************************************
+
+
+
+
+
+
+
+
 
 
 
@@ -291,16 +370,22 @@ let cheekSize = 5.5;
 let mouthSize = 0.9;
 
 
+
+
 // sheep color
 let sheepCol = color(pink);
+
+
 
 
 // sheep position
 let sheep_pos_x = -153.0;
 let sheep_pos_y = -173.0;
 
+
 // ---------- SHEEP PARAMETERS - END --------------------------------------------------------
  
+
 
     // ------------ SHEEP BACK LEGS / FEET ---------------------------------
  
@@ -309,6 +394,8 @@ let sheep_pos_y = -173.0;
     fill(sheepCol);
     rect(sheep_pos_x + 71, sheep_pos_y + 133,7,25);   // right leg
     rect(sheep_pos_x + 106, sheep_pos_y + 133,7,25);   //left leg
+
+
 
 
     //sheep feet
@@ -321,7 +408,15 @@ let sheep_pos_y = -173.0;
 
 
 
+
+
+
+
+
+
     //--------  SHEEP BODY -----------------------------------------
+
+
 
 
     //sheep body fur
@@ -336,11 +431,17 @@ let sheep_pos_y = -173.0;
     ellipse(sheep_pos_x + 80, sheep_pos_y + 109,sheepFurSize,sheepFurSize);
 
 
+
+
     //sheep fur filler
     ellipse(sheep_pos_x + 102, sheep_pos_y + 120,50,25);
 
 
+
+
     //---------------------------------------------------------------
+
+
 
 
     //---------- SHEEP HEAD -------------------------------------------
@@ -350,9 +451,13 @@ let sheep_pos_y = -173.0;
     ellipse(sheep_pos_x + 114, sheep_pos_y + 117,30,24);
 
 
+
+
     //sheep ears
     ellipse(sheep_pos_x + 100, sheep_pos_y + 108,15,5);   // right ear
     ellipse(sheep_pos_x + 127, sheep_pos_y + 108,15,5);   // left ear
+
+
 
 
     //sheep eyes
@@ -361,14 +466,20 @@ let sheep_pos_y = -173.0;
     ellipse(sheep_pos_x + 119, sheep_pos_y + 113,2,5);    // left eye
 
 
+
+
     //sheep nose
     ellipse(sheep_pos_x + 115, sheep_pos_y + 118,4,2);
+
+
 
 
     //sheep cheeks
     fill(240, 156, 188); //pink
     ellipse(sheep_pos_x + 105, sheep_pos_y + 118,cheekSize,cheekSize);
     ellipse(sheep_pos_x + 124, sheep_pos_y + 118,cheekSize,cheekSize);
+
+
 
 
     //sheep mouth
@@ -388,6 +499,8 @@ let sheep_pos_y = -173.0;
    
 
 
+
+
     //sheep feet
     fill(0); //black
     rect(sheep_pos_x + 83, sheep_pos_y + 160,7,6); // right hoof
@@ -396,11 +509,21 @@ let sheep_pos_y = -173.0;
 
 
 
+
+
+
+
   //------------- SHEEP END -----------------------------------------------------
   //*****************************************************************************
+
+
 
 
 }
  
  
+
+
+
+
 

@@ -9,46 +9,541 @@ Your final settings.txt will look something like this when you are finished:
 
 Wallpaper 1:
 
-//your parameter variables go here!
-let rect_width  = 20;
-let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+/*
 
-function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  // choose color combination
+  let is_stripe_color_PBG = false;  // design 1
+  let is_stripe_color_GGW = false;  // design 2
+  let is_stripe_color_ORB = false;  // design 3
+  let is_stripe_color_ROY = false;  // design 4
+  let is_stripe_color_PCB = false;  // design 5
+  let is_stripe_color_PLP = false;  // design 6
+  let is_stripe_color_CSB = false;  // design 7
+  let is_stripe_color_BGC = false;  // design 8
+  let is_stripe_color_BYO = true;  // design 9
 
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
-}
+
+
+
+  // set alpha
+  let color_alpha = 100;
+
+
+  // parameters
+  let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
+
+
+  let num_stripe_rows = 6;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
+  let num_stripe_cols = 6;  // even numbers that are multiple of 3 -> match cell alignment
+
+
+  let stripe_width = cell_size / num_stripe_cols;   // width -> cols -> vertical
+  let stripe_height = cell_size / num_stripe_rows;  // hieght -> rows -> horizontal
+
+  */
+
+
+  /*
+// sheep size
+let sheepFurSize = 30;
+let cheekSize = 6;
+let mouthSize = 1.5;
+
+
+// sheep color
+let sheepCol = color(white);
+
+
+// sheep position
+let sheep_pos_x = -185.0;
+let sheep_pos_y = -210.0;
+
+  */
+
+
+
+
+
+
+
+
+
+
 
 /////////////////////////////////
 
+
+
+
+
+
+
+
 Wallpaper 2:
 
-//your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
 
-function setup_wallpaper(pWallpaper) {
-  pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(NINE_LANDSCAPE);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+/*
 
-  //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
-}
+
+  // choose color combination
+  let is_stripe_color_PBG = false;  // design 1
+  let is_stripe_color_GGW = true;  // design 2
+  let is_stripe_color_ORB = false;  // design 3
+  let is_stripe_color_ROY = false;  // design 4
+  let is_stripe_color_PCB = false;  // design 5
+  let is_stripe_color_PLP = false;  // design 6
+  let is_stripe_color_CSB = false;  // design 7
+  let is_stripe_color_BGC = false;  // design 8
+  let is_stripe_color_BYO = false;  // design 9
+
+
+
+
+  // set alpha
+  let color_alpha = 100;
+
+
+  // parameters
+  let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
+
+
+  let num_stripe_rows = 12;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
+  let num_stripe_cols = 12;  // even numbers that are multiple of 3 -> match cell alignment
+
+
+  let stripe_width = cell_size / num_stripe_cols;   // width -> cols -> vertical
+  let stripe_height = cell_size / num_stripe_rows;  // hieght -> rows -> horizontal
+
+
+*/
+
+
+
+/*
+
+// sheep size
+let sheepFurSize = 27;
+let cheekSize = 6;
+let mouthSize = 1.5;
+
+
+// sheep color
+let sheepCol = color(white);
+
+
+// sheep position
+let sheep_pos_x = -161.0;
+let sheep_pos_y = -183.0;
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////
+
+Wallpaper 3:
+
+
+ /*
+  // choose color combination
+  let is_stripe_color_PBG = false;  // design 1
+  let is_stripe_color_GGW = false;  // design 2
+  let is_stripe_color_ORB = true;  // design 3
+  let is_stripe_color_ROY = false;  // design 4
+  let is_stripe_color_PCB = false;  // design 5
+  let is_stripe_color_PLP = false;  // design 6
+  let is_stripe_color_CSB = false;  // design 7
+  let is_stripe_color_BGC = false;  // design 8
+  let is_stripe_color_BYO = false;  // design 9
+
+  // set alpha
+  let color_alpha = 130;
+
+  // set cell_size factor
+  let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
+
+  // set stripe size
+  let num_stripe_rows = 18;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
+  let num_stripe_cols = 18;  // even numbers that are multiple of 3 -> match cell alignment
+*/
+
+
+
+/*
+// sheep size
+let sheepFurSize = 27;
+let cheekSize = 6;
+let mouthSize = 1.5;
+
+// sheep color
+let sheepCol = color(PCB_cream);
+
+// sheep position
+let sheep_pos_x = -145.0;
+let sheep_pos_y = -225.0;
+*/
+
+
+
+
+
+
+///////////////////////////////////////////
+
+
+Wallpaper 4:
+
+ // parameters
+ /*
+ //------ COLOR PARAMETERS - START ---------- lines 185 to 198 ---------------------------------------
+  let color_alpha = 85;  // controls plaid's opacity
+  // choose color combination
+  let is_stripe_color_PBG = true;  // design 4
+  let is_stripe_color_GGW = false;  // design 2
+  let is_stripe_color_ORB = false;  // design 3
+  let is_stripe_color_ROY = false;  // design (didn't use)
+  let is_stripe_color_PCB = false;  // design 5
+  let is_stripe_color_PLP = false;  // design 6
+  let is_stripe_color_CSB = false;  // design 7
+  let is_stripe_color_BGC = false;  // design 8
+  let is_stripe_color_BYO = false;  // design 9, design 1
+
+
+  //------ COLOR PARAMETERS - END -------------------------------------------------
+
+
+  //------ PLAID DIMENSIONS PARAMETERS - START ----------- lines 201 to 203 --------------------------------------
+  let num_stripe_rows = 6;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
+  let num_stripe_cols = 6;  // even numbers that are multiple of 3 -> match cell alignment
+  let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
+ 
+  //------ PLAID DIMENSIONS PARAMETERS - END -------------------------------------------------
+*/
+
+/*
+// ---------- SHEEP PARAMETERS - START -------- lines 307 to 322 ------------------------------------------------
+// sheep size
+let sheepFurSize = 38;
+let cheekSize = 5.5;
+let mouthSize = 0.9;
+
+// sheep color
+let sheepCol = color(pink);
+
+// sheep position
+let sheep_pos_x = -153.0;
+let sheep_pos_y = -173.0;
+
+
+// ---------- SHEEP PARAMETERS - END --------------------------------------------------------
+*/
+
+
+
+/////////////////////////////////////////////////////////////
+
+Wallpaper 5:
+
+/*
+  // choose color combination
+  let is_stripe_color_PBG = false;  // design 1
+  let is_stripe_color_GGW = false;  // design 2
+  let is_stripe_color_ORB = false;  // design 3
+  let is_stripe_color_ROY = false;  // design 4
+  let is_stripe_color_PCB = true;  // design 5
+  let is_stripe_color_PLP = false;  // design 6
+  let is_stripe_color_CSB = false;  // design 7
+  let is_stripe_color_BGC = false;  // design 8
+  let is_stripe_color_BYO = false;  // design 9
+
+  // set alpha
+  let color_alpha = 130;
+
+
+  // parameters
+  let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
+
+
+  let num_stripe_rows = 7;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
+  let num_stripe_cols = 3;  // even numbers that are multiple of 3 -> match cell alignment
+
+
+  let stripe_width = cell_size / num_stripe_cols;   // width -> cols -> vertical
+  let stripe_height = cell_size / num_stripe_rows;  // hieght -> rows -> horizontal
+
+*/
+
+/*
+// sheep size
+let sheepFurSize = 38;
+let cheekSize = 5.5;
+let mouthSize = 0.9;
+
+
+// sheep color
+let sheepCol = color(cream);
+
+
+// sheep position
+let sheep_pos_x = -3.0;
+let sheep_pos_y = -83.0;
+
+
+
+*/
+
+
+
+
+
+///////////////////////////////////////////////////////////////
+
+Wallpaper 6:
+
+
+/*
+  // choose color combination
+  let is_stripe_color_PBG = false;  // design 1
+  let is_stripe_color_GGW = false;  // design 2
+  let is_stripe_color_ORB = false;  // design 3
+  let is_stripe_color_ROY = false;  // design 4
+  let is_stripe_color_PCB = false;  // design 5
+  let is_stripe_color_PLP = true;  // design 6
+  let is_stripe_color_CSB = false;  // design 7
+  let is_stripe_color_BGC = false;  // design 8
+  let is_stripe_color_BYO = false;  // design 9
+
+
+  // set alpha
+  let color_alpha = 130;
+
+
+  // parameters
+  let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
+
+
+  let num_stripe_rows = 6;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
+  let num_stripe_cols = 6;  // even numbers that are multiple of 3 -> match cell alignment
+
+
+  let stripe_width = cell_size / num_stripe_cols;   // width -> cols -> vertical
+  let stripe_height = cell_size / num_stripe_rows;  // hieght -> rows -> horizontal
+
+*/
+
+/*
+// sheep size
+let sheepFurSize = 25;
+let cheekSize = 5;
+let mouthSize = 1.3;
+
+
+// sheep color
+let sheepCol = color(PBG_purple);
+
+
+// sheep position
+let sheep_pos_x = 14.0;
+let sheep_pos_y = -8.0;
+
+*/
+
+
+
+
+
+////////////////////////////////////////////////////////////////////
+
+Wallpaper 7:
+
+
+/*
+
+  // choose color combination
+  let is_stripe_color_PBG = false;  // design 1
+  let is_stripe_color_GGW = false;  // design 2
+  let is_stripe_color_ORB = false;  // design 3
+  let is_stripe_color_ROY = false;  // design 4
+  let is_stripe_color_PCB = false;  // design 5
+  let is_stripe_color_PLP = false;  // design 6
+  let is_stripe_color_CSB = true;  // design 7
+  let is_stripe_color_BGC = false;  // design 8
+  let is_stripe_color_BYO = false;  // design 9
+
+
+  // set alpha
+  let color_alpha = 130;
+
+
+  // parameters
+  let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
+
+
+  let num_stripe_rows = 6;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
+  let num_stripe_cols = 48;  // even numbers that are multiple of 3 -> match cell alignment
+
+
+  let stripe_width = cell_size / num_stripe_cols;   // width -> cols -> vertical
+  let stripe_height = cell_size / num_stripe_rows;  // hieght -> rows -> horizontal
+
+
+
+*/
+
+
+/*
+
+// sheep size
+let sheepFurSize = 25;
+let cheekSize = 5;
+let mouthSize = 1.3;
+
+
+// sheep color
+let sheepCol = color(cream);
+
+
+// sheep position
+let sheep_pos_x = 14.0;
+let sheep_pos_y = 22.0;
+
+
+
+*/
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////
+
+
+Wallpaper 8:
+/*
+  // choose color combination
+  let is_stripe_color_PBG = false;  // design 1
+  let is_stripe_color_GGW = false;  // design 2
+  let is_stripe_color_ORB = false;  // design 3
+  let is_stripe_color_ROY = false;  // design 4
+  let is_stripe_color_PCB = false;  // design 5
+  let is_stripe_color_PLP = false;  // design 6
+  let is_stripe_color_CSB = false;  // design 7
+  let is_stripe_color_BGC = true;  // design 8
+  let is_stripe_color_BYO = false;  // design 9
+
+
+
+
+  // set alpha
+  let color_alpha = 130;
+
+
+  // parameters
+  let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
+
+
+  let num_stripe_rows = 48 ;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
+  let num_stripe_cols = 6;  // even numbers that are multiple of 3 -> match cell alignment
+
+
+  let stripe_width = cell_size / num_stripe_cols;   // width -> cols -> vertical
+  let stripe_height = cell_size / num_stripe_rows;  // hieght -> rows -> horizontal
+
+*/
+
+
+
+/*
+
+
+// sheep size
+let sheepFurSize = 28;
+let cheekSize = 5;
+let mouthSize = 1.3;
+
+
+// sheep color
+let sheepCol = color(PLP_purple);
+
+
+// sheep position
+let sheep_pos_x = 14.0;
+let sheep_pos_y = 22.0;
+
+
+*/
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+Wallpaper 9:
+
+
+
+/*
+
+  // choose color combination
+  let is_stripe_color_PBG = false;  // design 1
+  let is_stripe_color_GGW = false;  // design 2
+  let is_stripe_color_ORB = false;  // design 3
+  let is_stripe_color_ROY = false;  // design 4
+  let is_stripe_color_PCB = false;  // design 5
+  let is_stripe_color_PLP = false;  // design 6
+  let is_stripe_color_CSB = false;  // design 7
+  let is_stripe_color_BGC = false;  // design 8
+  let is_stripe_color_BYO = true;  // design 9
+
+
+
+
+  // set alpha
+  let color_alpha = 130;
+
+
+  // parameters
+  let cell_size = 200.0;  // no less than 200 recommended; 200 (three colors - standard) - 250 (thick and thin) - 300 (two colors) - 400 (one color - big)
+
+
+  let num_stripe_rows = 12;  // even numbers that are multiple of 3 -> match cell alignment   |   2 (one olor - big), 3 (one color smaller), 4 (two colors)
+  let num_stripe_cols = 2;  // even numbers that are multiple of 3 -> match cell alignment
+
+
+  let stripe_width = cell_size / num_stripe_cols;   // width -> cols -> vertical
+  let stripe_height = cell_size / num_stripe_rows;  // hieght -> rows -> horizontal
+
+
+  */
+
+
+  /*
+
+// sheep size
+let sheepFurSize = 28;
+let cheekSize = 5;
+let mouthSize = 1.3;
+
+
+// sheep color
+let sheepCol = color(PLP_purple);
+
+
+// sheep position
+let sheep_pos_x = 48.0;
+let sheep_pos_y = 22.0;
+
+
+  */
